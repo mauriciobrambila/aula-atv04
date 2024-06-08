@@ -8,7 +8,6 @@ CREATE TABLE contatos (
         telefone VARCHAR(20) NOT NULL
 );
 
-
 INSERT INTO contatos (nome, cidade, telefone) VALUES
 ('Maria Silva', 'São Paulo', '(11) 98765-4321'),
 ('João Souza', 'Rio de Janeiro', '(21) 91234-5678'),

@@ -66,7 +66,6 @@ app.get("/liveness", (request, response) => {
             //uid: process.geteuid(),  
             date: new Date().getTime()
         });
-});
-
+}); 
 
 module.exports = app;
