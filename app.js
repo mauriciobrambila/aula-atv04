@@ -25,7 +25,9 @@ app.get('/consulta-dados', (request, response) => {
     connection.query(query, (err, results) => {
         if (err) {
             console.error('Erro ao executar a consulta:', err);
-            return response.status(500).json({
+            return response
+            .status(500)
+            .json({
                 error: 'Erro ao buscar dados do banco de dados'
         });
     }
@@ -49,9 +51,7 @@ app.get("/liveness", (request, response) => {
     .status(200)
     .json({
         message: "Meu app esta ok",
-        path: process.cwd(),
-        //gid: process.getegid(),  
-        //uid: process.geteuid(),  
+        path: process.cwd(), 
         date: new Date().getTime()
     });
 });
@@ -61,9 +61,7 @@ app.get("/liveness", (request, response) => {
         .status(200)
         .json({
             message: "Meu app esta pronto",
-            path: process.cwd(),
-            //gid: process.getegid(),  
-            //uid: process.geteuid(),  
+            path: process.cwd(),  
             date: new Date().getTime()
         });
 }); 
