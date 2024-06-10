@@ -6,12 +6,11 @@ USER root
 
 RUN apt-get update && apt-get upgrade -y
 
-RUN mkdir -p /usr/src/app/node_modules
-RUN mkdir -p /usr/src/app/tmp
+RUN apt-get update && apt-get upgrade -y && mkdir -p /usr/src/app/node_modules /usr/src/app/tmp
 
 WORKDIR /usr/src/app
 
-COPY package.json .
+COPY package.json package-lock.json ./
 
 RUN npm install
 

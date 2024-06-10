@@ -1,6 +1,5 @@
 const express = require("express");
 const mysql = require('mysql2');
-const os = require("os");
 const app = express();
 
 const dbConfig = {

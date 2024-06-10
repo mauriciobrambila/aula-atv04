@@ -17,6 +17,7 @@ services:
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
       MYSQL_DATABASE: aula04
+      MYSQL_ROOT_PASSWORD: ''
     ports:
       - '3307:3306'
     volumes:
