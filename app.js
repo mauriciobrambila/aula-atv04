@@ -7,7 +7,7 @@ const dbConfig = {
     user: process.env.DB_USER || 'root',
     password: process.env.DB_PASSWORD || '',
     database: process.env.DB_NAME || 'aula04'
-}; 
+};
 
 const connection = mysql.createConnection(dbConfig);
 connection.connect(err => {
@@ -25,13 +25,13 @@ app.get('/consulta-dados', (request, response) => {
         if (err) {
             console.error('Erro ao executar a consulta:', err);
             return response
-            .status(500)
-            .json({
-                error: 'Erro ao buscar dados do banco de dados'
-        });
-    }
-    return response.status(200).json({
-        data: results
+                .status(500)
+                .json({
+                    error: 'Erro ao buscar dados do banco de dados'
+                });
+        }
+        return response.status(200).json({
+            data: results
         });
     });
 });
@@ -39,30 +39,30 @@ app.get('/consulta-dados', (request, response) => {
 
 app.get("/", (request, response) => {
     return response
-    .status(200)
-    .json({
-        message: "Ola",
-    });
+        .status(200)
+        .json({
+            message: "Ola",
+        });
 });
 
 app.get("/liveness", (request, response) => {
     return response
-    .status(200)
-    .json({
-        message: "Meu app esta ok",
-        path: process.cwd(), 
-        date: new Date().getTime()
-    });
+        .status(200)
+        .json({
+            message: "Meu app esta ok",
+            path: process.cwd(),
+            date: new Date().getTime()
+        });
 });
 
-    app.get("/readiness", (request, response) => {
-        return response
+app.get("/readiness", (request, response) => {
+    return response
         .status(200)
         .json({
             message: "Meu app esta pronto",
-            path: process.cwd(),  
+            path: process.cwd(),
             date: new Date().getTime()
         });
-}); 
+});
 
 module.exports = app;
