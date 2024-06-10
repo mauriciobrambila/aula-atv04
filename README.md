@@ -9,4 +9,6 @@ Start do contêineres, images, mysql: Execute .\start.sh
 •  Clonar o Repositório: Clonar o repositório do projeto para o seu ambiente local.
 •  Construir a Imagem: No terminal, dentro do diretório do projeto, executar o comando:  docker-compose build ,assim construirá a imagem do contêiner.
 
+• Play no container
+
 •  Acessar a pagina: Uma vez que os contêineres estejam em execução, a pagina deve estar acessível em http://localhost:3000 , http://localhost:3000/consulta-dados, http://localhost:3000/liveness e http://localhost:3000/readiness
