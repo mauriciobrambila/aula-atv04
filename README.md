@@ -1,7 +1,7 @@
 # https://hub.docker.com/r/mauriciobrambila/aula04
 # https://github.com/mauriciobrambila/aula-atv04
 
-* Criei um arquivo chamado “start.sh” onde dentro coloquei o script: "docker run -p 3000:3000 --name aula-atv04 -d mauriciobrambila/aula041".
+* Criei um arquivo chamado “start.sh” onde dentro coloquei o script: "docker run -p 3000:3000 --name aula-atv04 -d mauriciobrambila/aula04".
 * resumindo, criei um script em um start simplificado, basta digitar .\start.sh , no terminal para iniciar a aplicação.
 
 Start do contêineres, images, mysql: Execute .\start.sh, controi a construirá a imagem do contêiner e tudo pra rodar a url
